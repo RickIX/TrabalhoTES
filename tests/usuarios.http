@@ -1,0 +1,38 @@
+### Cadastrar usuario
+POST http://localhost:3001/usuarios
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "nome": "matias",
+  "saldo" : 1000,
+  "despesas" : "",
+  "objetivos" : ""
+}
+
+### Listar usuarios
+GET http://localhost:3001/usuarios
+
+### Buscar usuario por nome
+GET http://localhost:3001/usuarios/matias
+
+### Atualizar usuario por id
+PUT http://localhost:3001/usuarios/3
+Content-Type: application/json
+
+{
+  "nome": "Joao",
+  "saldo" : 10000,
+  "despesas": [],
+  "objetivos": []
+}
+###Deletar usuario por nome
+DELETE http://localhost:3001/usuarios/Joao
+
+### Gerar relatório
+GET http://localhost:3001/usuarios/4/relatorio
+
+
+
+
+

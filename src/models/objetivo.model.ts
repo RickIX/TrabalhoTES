@@ -1,6 +1,6 @@
 export class Objetivo {
-    id! : number;
-   nome! : string;
-   valor! : number;
-   userId! : number;
-}
+      id! : number;
+     nome! : string;
+     valor! : number;
+     userId! : number;
+  }

@@ -1,0 +1,28 @@
+### Cadastrar objetivo
+POST http://localhost:3001/objetivos
+Content-Type: application/json
+
+{
+  "id" : 1,
+  "nome": "Cirurgia plastica",
+  "valor": 30069,
+  "userId": 4
+}
+
+### Listar objetivos
+GET http://localhost:3001/objetivos
+
+### Buscar objetivos por usuário
+GET http://localhost:3001/objetivos/3
+
+### Atualizar objetivo
+PUT http://localhost:3001/objetivos/1
+Content-Type: application/json
+
+{
+  "nome": "Novo Objetivo",
+  "valor": 6000
+}
+
+### Deletar objetivo
+DELETE http://localhost:3001/objetivos/1

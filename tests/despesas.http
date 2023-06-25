@@ -1,0 +1,28 @@
+### Cadastrar despesa para um usuário
+POST http://localhost:3001/usuarios/1/despesas
+Content-Type: application/json
+
+{
+"id": 1,
+"nome": "Aluguel",
+"valor": 1000,
+"userId": 3
+}
+
+### Listar todas as despesas
+GET http://localhost:3001/despesas
+
+### Buscar despesas por usuário
+GET http://localhost:3001/despesas/1
+
+### Atualizar despesa
+PUT http://localhost:3001/despesas/1
+Content-Type: application/json
+
+{
+"nome": "Luz 2",
+"valor": 1800
+}
+
+### Deletar despesa
+DELETE http://localhost:3001/despesas/1

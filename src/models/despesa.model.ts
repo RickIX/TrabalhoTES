@@ -1,6 +1,7 @@
-export class Despesa {
-    id! : number;
-   nome! : string;
-   valor! : number;
-   userId! : number;
-}
+export class Despesas {
+      id! : number;
+     nome! : string;
+     valor! : number;
+     userId! : number;
+  }
+  

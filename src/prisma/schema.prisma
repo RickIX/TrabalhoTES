@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+// Definição da tabela "User"
+model User {
+  id      Int      @id @default(autoincrement())
+  nome    String
+  saldo   Float
+  despesas Despesa[]
+  objetivos Objetivo[]
+}
+
+// Definição da tabela "Despesa"
+model Despesa {
+  id     Int     @id @default(autoincrement())
+  nome   String
+  valor  Float
+  userId Int
+  user   User    @relation(fields: [userId], references: [id])
+}
+
+// Definição da tabela "Objetivo"
+model Objetivo {
+  id     Int     @id @default(autoincrement())
+  nome   String
+  valor  Float
+  userId Int
+  user   User    @relation(fields: [userId], references: [id])
+}

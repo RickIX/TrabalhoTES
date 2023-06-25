@@ -1,0 +1,5 @@
+ul{
+    display: flex;
+    list-style: none; /* Remove as bolinhas da lista */
+    gap: 10px; /* Define o espaçamento entre os itens */
+}
